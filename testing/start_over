@@ -1,0 +1,21 @@
+Starting SCIFI Geoserver and cityapp - Just FOLLOW the manual
+
+
+(1.) Starting cityapp :
+
+~/cityapp/scripts/base/ca_starter.sh
+
+
+
+(2.) Starting Geoserver :
+
+
+/usr/share/geoserver/bin/ sh startup.sh
+
+
+
+*********************************************
+Path for SCIFI- Local computer
+
+cd /mnt/c/users/HP/Downloads
+***********************************************

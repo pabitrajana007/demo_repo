@@ -2,11 +2,14 @@
 grass/*
 geoserver_data/*
 data_to_client/*
+testing/*
+
 
 #exception to the rule
 !grass/.gitkeep
 !geoserver_data/.gitkeep
 !data_to_client/.gitkeep
+!testing/.gitkeep
 
 
 # Ignore files related to API keys
