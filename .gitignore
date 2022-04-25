@@ -1,12 +1,12 @@
 #exclude everything 
-grass /*
-geoserver_data /*
-data_to_client /*
+grass/*
+geoserver_data/*
+data_to_client/*
 
 #exception to the rule
-!grass /.gitkeep
-!geoserver_data /.gitkeep
-!data_to_client /.gitkeep
+!grass/.gitkeep
+!geoserver_data/.gitkeep
+!data_to_client/.gitkeep
 
 
 # Ignore files related to API keys
