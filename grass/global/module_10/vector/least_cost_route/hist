@@ -1,0 +1,19 @@
+COMMAND: r.path input="movement_directions" format="degree" raster_path="least_cost_route_temp" vector_path="least_cost_route_temp" start_points="stop_point"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:42 2021
+---------------------------------------------------------------------------------
+COMMAND: v.generalize --overwrite input="least_cost_route_temp" layer="-1" type="line,boundary,area" output="least_cost_route" method="sliding_averaging" threshold=1 look_ahead=7 reduction=50 slide=1 angle_thresh=180 degree_thresh=0 closeness_thresh=0 betweeness_thresh=0 alpha=2 beta=2 iterations=10
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:42 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect --quiet map="least_cost_route" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="least_cost_route" key="cat" layer="1" separator="pipe"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:45 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.addtable map=least_cost_route 'columns=level INT'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:45 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=least_cost_route column=level value=1
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:46 2021

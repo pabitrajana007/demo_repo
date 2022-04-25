@@ -1,0 +1,15 @@
+COMMAND: v.distance --overwrite -p -a from="least_cost_route" from_layer="1" from_type="point,line,area" to="stream_not_in_buffer" to_layer="1" to_type="line" output="connect" dmax=-1 dmin=-1 upload="dist" separator="pipe"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:43 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect --quiet map="connect" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="connect" key="cat" layer="1" separator="pipe"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:46 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.addtable map=connect 'columns=level INT'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:46 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=connect column=level value=2
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:47 2021

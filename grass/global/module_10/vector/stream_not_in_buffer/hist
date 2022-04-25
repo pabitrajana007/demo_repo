@@ -1,0 +1,15 @@
+COMMAND: v.overlay --overwrite -t ainput="stream" alayer="1" atype="line,auto" binput="least_cost_route_buffer" blayer="1" btype="area" operator="not" output="stream_not_in_buffer" olayer="1,0,0" snap=1e-8
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:43 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.connect --quiet map="stream_not_in_buffer" driver="sqlite" database="$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db" table="stream_not_in_buffer" key="cat" layer="1" separator="pipe"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:47 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.addtable map=stream_not_in_buffer 'columns=level INT'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:48 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=stream_not_in_buffer column=level value=2
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:48 2021

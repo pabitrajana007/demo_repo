@@ -1,0 +1,2 @@
+1/m1b_highway_points_1|m1b_highway_points_1|cat|$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db|sqlite
+2/m1b_highway_points_2|m1b_highway_points_2|cat|$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db|sqlite

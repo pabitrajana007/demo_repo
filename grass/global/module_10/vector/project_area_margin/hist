@@ -1,0 +1,3 @@
+COMMAND: v.overlay --overwrite -t ainput="project_area_buffer" alayer="1" atype="area,auto" binput="project_area" blayer="1" btype="area" operator="xor" output="project_area_margin" olayer="1,0,0" snap=1e-8
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:31 2021

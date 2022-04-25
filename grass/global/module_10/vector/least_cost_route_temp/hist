@@ -1,0 +1,3 @@
+COMMAND: r.path input="movement_directions" format="degree" raster_path="least_cost_route_temp" vector_path="least_cost_route_temp" start_points="stop_point"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:42 2021

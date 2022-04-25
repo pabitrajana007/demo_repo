@@ -1,0 +1,7 @@
+COMMAND: r.stream.extract --overwrite elevation="dem_odisha_float" threshold=3000 d8cut=1 mexp=0 stream_length=20 memory=300 stream_vector="stream_temp"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:43 2021
+---------------------------------------------------------------------------------
+COMMAND: v.generalize --overwrite input="stream_temp" layer="-1" type="line,boundary,area" output="stream" method="sliding_averaging" threshold=1 look_ahead=7 reduction=50 slide=1 angle_thresh=180 degree_thresh=0 closeness_thresh=0 betweeness_thresh=0 alpha=2 beta=2 iterations=10
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:43 2021

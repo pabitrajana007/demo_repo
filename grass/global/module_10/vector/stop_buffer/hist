@@ -1,0 +1,16 @@
+COMMAND: v.in.ogr --overwrite input="/home/titusz/cityapp/data_from_browser/selection.geojson" output="points" min_area=0.0001 type="" snap=-1
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:30 2021
+-----------------------------------------------------
+1 input polygons
+Total area: 7.78689E+06 (1 areas)
+Overlapping area: 0 (0 areas)
+Area without category: 0 (0 areas)
+---------------------------------------------------------------------------------
+COMMAND: v.extract --overwrite input="points" layer="1" type="point,line,boundary,centroid,area,face" cats="3" output="stop_point" new=-1
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:31 2021
+---------------------------------------------------------------------------------
+COMMAND: v.buffer --overwrite input="stop_point" layer="-1" type="point,line,area" output="stop_buffer" distance=0.002 angle=0 scale=1.0
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:31 2021

@@ -1,0 +1,11 @@
+COMMAND: r.path input="movement_directions" format="degree" raster_path="least_cost_route_temp" vector_path="least_cost_route_temp" start_points="stop_point"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:42 2021
+---------------------------------------------------------------------------------
+COMMAND: v.generalize --overwrite input="least_cost_route_temp" layer="-1" type="line,boundary,area" output="least_cost_route" method="sliding_averaging" threshold=1 look_ahead=7 reduction=50 slide=1 angle_thresh=180 degree_thresh=0 closeness_thresh=0 betweeness_thresh=0 alpha=2 beta=2 iterations=10
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:42 2021
+---------------------------------------------------------------------------------
+COMMAND: v.buffer --overwrite input="least_cost_route" layer="-1" type="point,line,area" output="least_cost_route_buffer" distance=0.001 angle=0 scale=1.0
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:43 2021

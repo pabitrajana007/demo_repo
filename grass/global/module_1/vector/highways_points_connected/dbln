@@ -1,0 +1,1 @@
+1/highways|highways_points_connected|cat|$GISDBASE/$LOCATION_NAME/$MAPSET/sqlite/sqlite.db|sqlite

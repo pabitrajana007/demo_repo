@@ -1,0 +1,11 @@
+COMMAND: v.overlay ainput="lines_osm" alayer="1" atype="auto" binput="temp_20947" blayer="1" btype="area" operator="and" output="lines" olayer="0,1,0" snap=1e-8
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: PERMANENT USER: titusz DATE: Wed Jan 20 10:35:10 2021
+---------------------------------------------------------------------------------
+COMMAND: v.extract --overwrite --quiet input="lines@PERMANENT" layer="1" type="line" where="highway>0" output="highways" new=-1
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:09 2021
+---------------------------------------------------------------------------------
+COMMAND: v.to.points --overwrite --quiet input="highways" layer="1" type="point,line,boundary,centroid,face" output="m1b_highway_points" dmax=0.003
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Tue Jun 15 12:00:26 2021

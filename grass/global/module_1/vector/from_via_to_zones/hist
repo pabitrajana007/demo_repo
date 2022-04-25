@@ -1,0 +1,7 @@
+COMMAND: v.patch --overwrite --quiet input="m1_from_points,m1_via_points" output="from_via_to_points"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Tue Feb  2 06:00:12 2021
+---------------------------------------------------------------------------------
+COMMAND: v.buffer --overwrite --quiet input="from_via_to_points" layer="-1" type="point,line,area" output="from_via_to_zones" distance=0.00017965900720432618 minordistance=0.00017965900720432618 angle=0 scale=1.0
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:20 2021

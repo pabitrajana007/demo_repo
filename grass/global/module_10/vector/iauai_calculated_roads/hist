@@ -1,0 +1,3 @@
+COMMAND: v.patch --overwrite -e input="connect,least_cost_route,stream_not_in_buffer" output="iauai_calculated_roads"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Fri Feb 26 07:32:16 2021

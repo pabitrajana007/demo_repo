@@ -1,0 +1,12 @@
+COMMAND: v.in.ogr --overwrite input="/home/titusz/cityapp/data_from_browser/selection.geojson" output="m1_stricken_area" min_area=0.0001 type="" snap=-1
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Mon Jun 14 13:19:09 2021
+-----------------------------------------------------
+1 input polygons
+Total area: 1.47978E+06 (1 areas)
+Overlapping area: 0 (0 areas)
+Area without category: 0 (0 areas)
+---------------------------------------------------------------------------------
+COMMAND: v.type --overwrite input="m1_stricken_area" layer="-1" output="m1_stricken_area_lines" from_type="boundary" to_type="line"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Mon Jun 14 13:19:21 2021

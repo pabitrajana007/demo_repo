@@ -1,0 +1,3 @@
+COMMAND: r.to.vect --overwrite input="m1b_accessibility_map" output="m1b_accessibility_map" type="point" column="data"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Tue Jun 15 12:00:37 2021

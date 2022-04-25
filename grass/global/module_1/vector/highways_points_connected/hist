@@ -1,0 +1,91 @@
+COMMAND: v.overlay ainput="lines_osm" alayer="1" atype="auto" binput="temp_20947" blayer="1" btype="area" operator="and" output="lines" olayer="0,1,0" snap=1e-8
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: PERMANENT USER: titusz DATE: Wed Jan 20 10:35:10 2021
+---------------------------------------------------------------------------------
+COMMAND: v.extract --overwrite --quiet input="lines@PERMANENT" layer="1" type="line" where="highway>0" output="highways" new=-1
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:09 2021
+---------------------------------------------------------------------------------
+COMMAND: v.net --overwrite --quiet input="highways" points="from_via_to_points" output="highways_points_connected" operation="connect" arc_layer="1" arc_type="line,boundary" node_layer="2" threshold=0.003 turn_layer="3" turn_cat_layer="4"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:11 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn map=highways_points_connected 'columns=avg_speed INT'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:13 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=40 'where=highway="motorway" OR highway="motorway_link"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:13 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.addcolumn map=highways_points_connected 'columns=avg_speed INT'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:14 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=30 'where=highway="trunk" OR highway="trunk_link" OR highway="primary" OR highway="primary_link"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:14 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=40 'where=highway="motorway" OR highway="motorway_link"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:14 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=30 'where=highway="secondary" OR highway="secondary_link"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:14 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=30 'where=highway="trunk" OR highway="trunk_link" OR highway="primary" OR highway="primary_link"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:15 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=30 'where=highway="tertiary" OR highway="tertiary_link"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:15 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=30 'where=highway="secondary" OR highway="secondary_link"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:15 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=20 'where=highway="unclassified"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:16 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=30 'where=highway="tertiary" OR highway="tertiary_link"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:16 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=20 'where=highway="service" OR highway="track"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:16 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=20 'where=highway="unclassified"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:16 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=20 'where=highway="residential"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:17 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=20 'where=highway="service" OR highway="track"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:17 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=5 'where=highway="living_street" OR highway="pedestrian"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:17 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=20 'where=highway="residential"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:17 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=3 'where=highway="footway" OR highway="bridleway" OR highway="steps" OR highway="path"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:18 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=5 'where=highway="living_street" OR highway="pedestrian"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:18 2021
+---------------------------------------------------------------------------------
+COMMAND: v.db.update map=highways_points_connected layer=1 column=avg_speed value=3 'where=highway="footway" OR highway="bridleway" OR highway="steps" OR highway="path"'
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Thu Feb 25 19:21:18 2021

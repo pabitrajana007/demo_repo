@@ -1,0 +1,11 @@
+COMMAND: v.in.ogr --overwrite input="/home/titusz/cityapp/data_from_browser/selection.geojson" output="m1b_input_points" min_area=0.0001 type="" snap=-1
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Tue Jun 15 12:00:18 2021
+---------------------------------------------------------------------------------
+COMMAND: v.select --overwrite ainput="m1b_input_points" alayer="1" atype="point,line,area" binput="selection@PERMANENT" blayer="1" btype="point,line,area" output="m1b_points" operator="overlap"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Tue Jun 15 12:00:26 2021
+---------------------------------------------------------------------------------
+COMMAND: v.buffer --overwrite --quiet input="m1b_points" layer="-1" type="point,line,area" output="m1b_from_zones" distance=0.00009881245396237940 minordistance=0.00009881245396237940 angle=0 scale=1.0
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Tue Jun 15 12:00:31 2021

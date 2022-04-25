@@ -1,0 +1,3 @@
+COMMAND: v.edit map="m1_to_points" layer="1" type="point,line,boundary,centroid" tool="create" threshold=-1,0,0 snap="no"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_1 USER: titusz DATE: Tue Feb  2 05:59:47 2021

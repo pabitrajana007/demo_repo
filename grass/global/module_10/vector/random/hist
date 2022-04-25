@@ -1,0 +1,3 @@
+COMMAND: v.random --overwrite output="random" npoints=10000 layer="-1" zmin=0.0 zmax=0.0 column_type="double precision"
+GISDBASE: /home/titusz/cityapp/grass
+LOCATION: global MAPSET: module_10 USER: titusz DATE: Mon Jun 14 13:25:36 2021
