@@ -1,6 +1,7 @@
 #exclude everything 
 grass /*
 geoserver_data /*
+data_to_client /*
 
 #exception to the rule
 !grass /.gitkeep
